@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/image/Logo-short.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Mansalva&display=swap" rel="stylesheet" />
+    <!-- Flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Nusantara Bercerita</title>
+  </head>
+  <body>
+    <!-- Desktop Nav -->
+    <header id="desktop-nav">
+      <img src="assets/image/Logo-short.png" alt="logo indonesia bercerita" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#menjelajah">Jelajahi Nusantara</a></li>
+          <li><a href="#about-us">Tentang Kami</a></li>
+          <li><a href="#cerita-pilihan-nusantara">Cerita Nusantara</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger-menu" onclick="openSidebar()"><i class="fi fi-ss-menu-burger"></i></button>
+    </header>
+    <div id="mobile-sidebar" class="mobile-sidebar">
+      <button class="close-sidebar" onclick="closeSidebar()"><i class="fi fi-ss-cross"></i></button>
+      <a href="index.html">Home</a>
+      <a href="#menjelajah">Jelajahi Nusantara</a>
+      <a href="#about-us">Tentang Kami</a>
+      <a href="#cerita-pilihan-nusantara">Cerita Nusantara</a>
+    </div>
+    <div id="sidebar-scr-overlay" class="sidebar-scr-overlay" onclick="closeSidebar()"></div>
+    <main>
+      <section id="hero">
+        <img src="assets/image/Logo.png" alt="" />
+        <div class="nav-pendukung">
+          <div class="cerita-pilihan">
+            <p>Cerita Pilihan</p>
+            <div class="pembatas"></div>
+          </div>
+          <a href="">Rumah Gadang</a>
+          <a href="">Asal Usul "Minangkabau"</a>
+          <a href="tongkonan.html">Rumah Tongkonan</a>
+          <div class="explore">
+            <p>Eksplor</p>
+            <i class="fi fi-ss-arrow-small-down"></i>
+          </div>
+        </div>
+        <div class="mobile-nav-pendukung">
+          <div class="mobile-explore">
+            <p>Gulir tuk Eksplor</p>
+            <i class="fi fi-ss-arrow-small-down"></i>
+          </div>
+        </div>
+      </section>
+      <section id="jelajah">
+        <div class="judul-jelajah">
+          <h1>Jelajahi Nusantara</h1>
+          <p>Eksplor keragaman cerita dari Nusantara berdasarkan kategorinya</p>
+        </div>
+        <div class="carousel-jelajah">
+          <div class="cards-jelajah" onclick="location.href='rumah_adat.html';" style="cursor: pointer">
+            <div class="image-bagian-jelajah">
+              <img src="assets/image/joglo.png" alt="rumah joglo" />
+            </div>
+            <div class="teks-bagian-jelajah">
+              <h1>Rumah Adat</h1>
+            </div>
+          </div>
+          <div class="cards-jelajah" onclick="location.href='#';" style="cursor: pointer">
+            <div class="image-bagian-jelajah">
+              <img src="assets/image/aksara-bali.png" alt="aksara bali" />
+            </div>
+            <div class="teks-bagian-jelajah">
+              <h1>Aksara</h1>
+            </div>
+          </div>
+          <div class="cards-jelajah" onclick="location.href='#';" style="cursor: pointer">
+            <div class="image-bagian-jelajah">
+              <img src="assets/image/kain.png" alt="kain" />
+            </div>
+            <div class="teks-bagian-jelajah">
+              <h1>Kain</h1>
+            </div>
+          </div>
+          <div class="cards-jelajah" onclick="location.href='#';" style="cursor: pointer">
+            <div class="image-bagian-jelajah">
+              <img src="assets/image/keris.png" alt="keris" />
+            </div>
+            <div class="teks-bagian-jelajah">
+              <h1>Senjata</h1>
+            </div>
+          </div>
+          <div class="cards-jelajah" onclick="location.href='#';" style="cursor: pointer">
+            <div class="image-bagian-jelajah">
+              <img src="assets/image/malin-kundang.png" alt="malin kundang" />
+            </div>
+            <div class="teks-bagian-jelajah">
+              <h1>Cerita Rakyat</h1>
+            </div>
+          </div>
+          <div class="cards-jelajah" onclick="location.href='#';" style="cursor: pointer">
+            <div class="image-bagian-jelajah">
+              <img src="assets/image/lompat-batu.png" alt="lompat batu" />
+            </div>
+            <div class="teks-bagian-jelajah">
+              <h1>Adat</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about-us">
+        <div class="teks-about-us">
+          <div class="judul-about-us">
+            <p>ABOUT US</p>
+            <h1>Sejarah Bertutur</h1>
+          </div>
+          <div class="sejarah-about-us">
+            <p>
+              Nusantara Bercerita adalah platform edukasi sekaligus inspirasi
+              yang mendokumentasikan dan membagikan budaya, bahasa, cerita, dan
+              dongeng dari berbagai daerah di Nusantara. Di sini, kita dapat
+              mengeksplorasi kekayaan warisan budaya Nusantara, memahami
+              nilai-nilai luhur dari cerita tradisional, serta terhubung dengan
+              komunitas yang peduli terhadap pelestarian budaya. Platform ini
+              juga bertujuan untuk mengajarkan generasi muda tentang Nusantara
+              agar mereka memiliki pengetahuan yang lebih luas dan apresiasi
+              terhadap akar budaya mereka.
+            </p>
+          </div>
+        </div>
+        <div class="image-about-us">
+          <img
+            src="assets/image/rendang-potongan.png"
+            alt="rendang"
+            class="gambar-pendukung1" />
+          <img
+            src="assets/image/gadang-potongan.png"
+            alt="rumah gadang"
+            class="gambar-utama" />
+          <img
+            src="assets/image/batik-potongan.png"
+            alt="batik"
+            class="gambar-pendukung2" />
+        </div>
+      </section>
+      <section id="cerita-pilihan-nusantara">
+        <div class="judul-section-cerita">
+          <h1>Cerita Pilihan Nusantara</h1>
+          <p>
+            Cerita Populer dari Nusantara sebagai Bacaan Awal yang Menginspirasi
+            dari setiap kategori
+          </p>
+        </div>
+        <div class="carousel-cerita">
+          <div class="card-cerita" onclick="location.href='tongkonan.html';">
+            <img src="assets/image/tongkonan.png" alt="rumah adat tongkonan">
+            <div class="img-overlay-cc">
+              <h1>Rumah Tongkonan</h1>
+            </div>
+            <div class="desc-cc">
+              <p>
+                Rumah tradisional khas suku Toraja di Sulawesi Selatan. 
+                Tongkonan memiliki arsitektur unik dengan atap melengkung 
+                menyerupai perahu yang terbuat dari bambu atau seng.
+              </p>
+              <button class="selengkapnya">
+                <p>Selengkapnya</p>
+                <i class="fi fi-ss-arrow-small-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-cerita" onclick="location.href='#';">
+            <img src="assets/image/rendang.png" alt="rumah adat tongkonan">
+            <div class="img-overlay-cc">
+              <h1>Rendang</h1>
+            </div>
+            <div class="desc-cc">
+              <p>
+                Masakan khas Minangkabau, Sumatera Barat, yang terbuat 
+                dari daging sapi yang dimasak dalam santan dan bumbu rempah 
+                seperti cabai, kunyit, jahe, dan serai.
+              </p>
+              <button class="selengkapnya">
+                <p>Selengkapnya</p>
+                <i class="fi fi-ss-arrow-small-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-cerita" onclick="location.href='#';">
+            <img src="assets/image/megamendung.png" alt="rumah adat tongkonan">
+            <div class="img-overlay-cc">
+              <h1>Batik Megamendung</h1>
+            </div>
+            <div class="desc-cc">
+              <p>
+                Batik Megamendung adalah motif batik khas Cirebon, Jawa Barat, 
+                yang menggambarkan awan dengan warna-warna cerah yang melambangkan 
+                keharmonisan, kesejukan, dan keberkahan.
+              </p>
+              <button class="selengkapnya">
+                <p>Selengkapnya</p>
+                <i class="fi fi-ss-arrow-small-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-cerita" onclick="location.href='#';">
+            <img src="assets/image/aksara-jawa.png" alt="rumah adat tongkonan">
+            <div class="img-overlay-cc">
+              <h1>Aksara Jawa</h1>
+            </div>
+            <div class="desc-cc">
+              <p>
+                Aksara Jawa adalah sistem tulisan tradisional yang digunakan untuk 
+                menulis bahasa Jawa. Aksara ini terdiri dari 20 huruf dasar dan 
+                simbol-simbol lainnya,...
+              </p>
+              <button class="selengkapnya">
+                <p>Selengkapnya</p>
+                <i class="fi fi-ss-arrow-small-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <footer>
+      <div class="footer-subscribe-line">
+        <h1>Langganan untuk Fakta, Cerita, dan Berita Nusantara mingguan.</h1>
+        <div class="footer-sl-input">
+          <input type="text" placeholder="Masukkan email Anda" name="langganan"/>
+          <button type="submit">Langganan</button>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-nav-line">
+        <div class="footer-nl-socials">
+          <img src="assets/image/Logo.png" alt="">
+          <div class="socials-icons">
+            <i class="fi fi-brands-instagram"></i>
+            <i class="fi fi-brands-youtube"></i>
+            <i class="fi fi-brands-twitter-alt"></i>
+            <i class="fi fi-brands-tik-tok"></i>
+          </div>
+        </div>
+        <div class="footer-nl-navigations">
+          <div class="footer-nl-n-group">
+            <h2>Kategori</h2>
+            <ul>
+              <li><a href="#">Bahasa</a></li>
+              <li><a href="#">Rumah Adat</a></li>
+              <li><a href="#">Aksara</a></li>
+            </ul>
+          </div>
+          <div class="footer-nl-n-group">
+            <h2>Navigasi</h2>
+            <ul>
+              <li><a href="#">Jelajahi Nusantara</a></li>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Cerita Pilihan</a></li>
+            </ul>
+          </div>
+          <div class="footer-nl-n-group">
+            <h2>Referensi</h2>
+            <ul>
+              <li><a href="#">Detik News</a></li>
+              <li><a href="#">Wikipedia</a></li>
+              <li><a href="#">ChatGPT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright-line">
+        <hr>
+        <div class="footer-cl-security">
+          <p>Copyright &copy; 2024 TheRajulain. All Rights Reserved.</p>
+          <ul>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Ketentuan Layanan</a></li>
+            <li><a href="#">Kuki</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer> -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,935 @@
+:root {
+  --fontUtama: "mansalva" ;
+  --fontSecond: "figtree";
+  --fontRegular: 400;
+  --fontBold: 700;
+  --font14: 14px;
+  --font16: 16px;
+  --font18: 18px;
+  --font20: 20px;
+  --font25: 25px;
+  --font30: 30px;
+  --font35: 35px;
+  --font40: 40px;
+  --font50: 50px;
+  --font60: 60px;
+  --font70: 70px;
+  --colorLight: white;
+  --colorDark: black;
+  --colorYellow: #ffebd3;
+  --colorPrimary: #394f33;
+  --colorSecondary: #222f1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, a {
+  font-size: var(--font18);
+  font-family: var(--fontSecond);
+  color: var(--colorLight);
+}
+
+h1 {
+  font-family: var(--fontSecond);
+  color: var(--colorLight);
+  font-size: var(--font40);
+}
+
+h2 {
+  font-family: var(--fontSecond);
+  color: var(--colorLight);
+  font-size: var(--font25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #394f33;
+  overflow-x: hidden;
+  font-variant-ligatures: no-contextual;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes logoMuncul {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes navbarSlide {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes navPendukungSlide {
+  0% {
+    opacity: 0;
+    margin-bottom: -200px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 0px;
+  }
+}
+#desktop-nav {
+  top: -200px;
+  animation: navbarSlide 2s forwards 1.5s ease-out;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+#desktop-nav img {
+  width: 60px;
+  height: auto;
+}
+#desktop-nav nav {
+  display: block;
+}
+#desktop-nav nav ul {
+  display: flex;
+  gap: 50px;
+}
+#desktop-nav nav ul li {
+  list-style: none;
+}
+#desktop-nav nav ul li a {
+  font-size: var(--font18);
+}
+#desktop-nav .hamburger-menu {
+  display: none;
+}
+
+#desktop-nav.scrolled {
+  background-color: var(--colorPrimary);
+  padding: 2px 50px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px 30px 50px;
+  background-color: var(--colorPrimary);
+  gap: 50px;
+}
+footer .footer-subscribe-line {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-subscribe-line h1 {
+  width: 40%;
+  font-size: var(--font25);
+}
+footer .footer-subscribe-line .footer-sl-input {
+  display: flex;
+  gap: 20px;
+}
+footer .footer-subscribe-line .footer-sl-input ::-moz-placeholder {
+  color: var(--colorPrimary);
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+footer .footer-subscribe-line .footer-sl-input ::placeholder {
+  color: var(--colorPrimary);
+  transition: color 0.3s ease;
+}
+footer .footer-subscribe-line .footer-sl-input ::-moz-placeholder:focus {
+  color: var(--colorSecondary);
+}
+footer .footer-subscribe-line .footer-sl-input ::placeholder:focus {
+  color: var(--colorSecondary);
+}
+footer .footer-subscribe-line .footer-sl-input input {
+  height: -moz-max-content;
+  height: max-content;
+  width: 300px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--fontSecond);
+  font-size: var(--font20);
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: background-color 0.3s ease;
+}
+footer .footer-subscribe-line .footer-sl-input input:focus {
+  background-color: var(--colorLight);
+}
+footer .footer-subscribe-line .footer-sl-input button {
+  height: -moz-max-content;
+  height: max-content;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  font-family: var(--fontSecond);
+  font-size: var(--font20);
+  font-weight: var(--fontBold);
+  background-color: var(--colorSecondary);
+  color: var(--colorLight);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+footer .footer-subscribe-line .footer-sl-input button:hover {
+  background-color: var(--colorLight);
+  color: var(--colorSecondary);
+}
+footer .footer-nav-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-nav-line .footer-nl-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-nav-line .footer-nl-socials img {
+  width: 250px;
+}
+footer .footer-nav-line .footer-nl-socials .socials-icons {
+  display: flex;
+  gap: 25px;
+}
+footer .footer-nav-line .footer-nl-socials .socials-icons i {
+  font-size: 30px;
+  color: var(--colorLight);
+}
+footer .footer-nav-line .footer-nl-socials .socials-icons i:hover {
+  cursor: pointer;
+}
+footer .footer-nav-line .footer-nl-navigations {
+  display: flex;
+  justify-content: end;
+  gap: 50px;
+}
+footer .footer-nav-line .footer-nl-navigations .footer-nl-n-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-nav-line .footer-nl-navigations ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .footer-nav-line .footer-nl-navigations ul li {
+  list-style: none;
+}
+footer .footer-nav-line .footer-nl-navigations ul li a {
+  font-size: var(--font20);
+  color: var(--colorLight);
+  transition: color 0.3s ease-in, -webkit-text-decoration 0.3s ease-in-out;
+  transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in;
+  transition: text-decoration 0.3s ease-in-out, color 0.3s ease-in, -webkit-text-decoration 0.3s ease-in-out;
+}
+footer .footer-nav-line .footer-nl-navigations ul li a:hover {
+  color: var(--colorYellow);
+}
+footer .footer-copyright-line {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer-copyright-line .footer-cl-security {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+footer .footer-copyright-line .footer-cl-security ul {
+  display: flex;
+  gap: 20px;
+}
+footer .footer-copyright-line .footer-cl-security ul li {
+  list-style: none;
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url(assets/image/sawah.jpg);
+  background-size: cover;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+#hero img {
+  animation: logoMuncul 7s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  z-index: 2;
+}
+#hero .nav-pendukung {
+  width: 100%;
+  margin-bottom: -200px;
+  opacity: 0;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: navPendukungSlide 2s forwards 2s ease-out;
+  z-index: 2;
+  font-size: 20px;
+}
+#hero .nav-pendukung .cerita-pilihan {
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  gap: 20px;
+}
+#hero .nav-pendukung .cerita-pilihan .pembatas {
+  background-color: var(--colorLight);
+  width: 3px;
+  height: 20px;
+}
+#hero .explore {
+  color: var(--colorLight);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  animation: atasBawahExplore 2s infinite;
+}
+#hero .explore p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+  text-align: end;
+}
+#hero .explore i {
+  font-size: 25px;
+}
+#hero .mobile-nav-pendukung {
+  display: none;
+}
+
+@keyframes atasBawahExplore {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+#jelajah {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  padding: 50px 0 150px 0;
+  background-color: var(--colorSecondary);
+}
+#jelajah .judul-jelajah {
+  padding: 0 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#jelajah .judul-jelajah h1 {
+  font-family: var(--fontUtama);
+  font-weight: var(--fontRegular);
+  font-size: var(--font70);
+  color: var(--colorLight);
+}
+#jelajah .judul-jelajah p {
+  color: var(--colorLight);
+  font-family: var(--fontSecond);
+  font-size: var(--font20);
+  width: 25%;
+}
+#jelajah .carousel-jelajah {
+  height: 700px;
+  padding: 0 100px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 50px;
+  align-items: center;
+}
+#jelajah .carousel-jelajah::-webkit-scrollbar {
+  display: none;
+}
+#jelajah .carousel-jelajah .cards-jelajah {
+  border-radius: 0 50px;
+  flex: 1;
+  min-width: 365px;
+  height: 600px;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+#jelajah .carousel-jelajah .cards-jelajah:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+#jelajah .carousel-jelajah .cards-jelajah .image-bagian-jelajah {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#jelajah .carousel-jelajah .cards-jelajah .image-bagian-jelajah img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#jelajah .carousel-jelajah .cards-jelajah .teks-bagian-jelajah {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#jelajah .carousel-jelajah .cards-jelajah .teks-bagian-jelajah::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+}
+#jelajah .carousel-jelajah .cards-jelajah .teks-bagian-jelajah h1 {
+  font-family: var(--fontSecond);
+  font-size: var(--font35);
+  color: var(--colorLight);
+  z-index: 2;
+}
+
+#about-us {
+  padding: 75px 100px;
+  display: flex;
+  position: relative;
+}
+#about-us .teks-about-us {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  row-gap: 25px;
+}
+#about-us .teks-about-us .judul-about-us {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+#about-us .teks-about-us .judul-about-us p {
+  font-family: var(--fontSecond);
+  font-size: var(--font20);
+  color: var(--colorLight);
+  letter-spacing: 10px;
+}
+#about-us .teks-about-us .judul-about-us h1 {
+  font-family: var(--fontUtama);
+  font-weight: var(--fontRegular);
+  font-size: var(--font70);
+  color: var(--colorYellow);
+}
+#about-us .teks-about-us .sejarah-about-us {
+  font-family: var(--fontSecond);
+  font-size: var(--font20);
+  color: var(--colorLight);
+}
+#about-us .teks-about-us .sejarah-about-us p {
+  line-height: 30px;
+  width: 70%;
+}
+#about-us .image-about-us {
+  display: flex;
+  align-items: center;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  right: 0px;
+  top: -50px;
+}
+#about-us .image-about-us .gambar-utama {
+  height: 80vh;
+  margin-left: -270px;
+  margin-right: -270px;
+  z-index: 3;
+}
+#about-us .image-about-us .gambar-pendukung1 {
+  height: 70vh;
+  transform: rotate(-15deg);
+  z-index: 2;
+}
+#about-us .image-about-us .gambar-pendukung2 {
+  height: 70vh;
+  transform: rotate(15deg);
+  z-index: 2;
+}
+
+#cerita-pilihan-nusantara {
+  background-color: #222f1e;
+  padding: 150px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+#cerita-pilihan-nusantara .judul-section-cerita {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 170px;
+}
+#cerita-pilihan-nusantara .judul-section-cerita h1 {
+  font-family: var(--fontUtama);
+  font-weight: var(--fontRegular);
+  font-size: var(--font70);
+  color: var(--colorYellow);
+}
+#cerita-pilihan-nusantara .judul-section-cerita p {
+  font-family: var(--fontSecond);
+  font-size: var(--font20);
+  color: var(--colorLight);
+  width: 50%;
+}
+#cerita-pilihan-nusantara .carousel-cerita {
+  display: flex;
+  align-items: center;
+  height: 800px;
+  padding: 0 170px;
+  overflow-x: scroll;
+  gap: 50px;
+}
+#cerita-pilihan-nusantara .carousel-cerita::-webkit-scrollbar {
+  display: none;
+}
+#cerita-pilihan-nusantara .carousel-cerita .card-cerita {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 50px 0 50px;
+  transition: transform 0.3s ease;
+}
+#cerita-pilihan-nusantara .carousel-cerita .card-cerita:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+#cerita-pilihan-nusantara .carousel-cerita .card-cerita img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#cerita-pilihan-nusantara .carousel-cerita .card-cerita .img-overlay-cc {
+  width: 100%;
+  height: 400px;
+  padding: 15px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: linear-gradient(to top, rgb(57, 79, 51), rgba(255, 255, 255, 0));
+  position: absolute;
+}
+#cerita-pilihan-nusantara .carousel-cerita .card-cerita .desc-cc {
+  min-height: 300px;
+  padding: 30px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--colorPrimary);
+}
+#cerita-pilihan-nusantara .carousel-cerita .card-cerita .desc-cc button {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border: none;
+  display: flex;
+  gap: 10px;
+  font-size: var(--font20);
+}
+#cerita-pilihan-nusantara .carousel-cerita .card-cerita .desc-cc button i {
+  font-size: 25px;
+  color: var(--colorLight);
+}
+
+#tongkonan-hero {
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url(assets/image/tongkonan.png);
+  background-size: cover;
+}
+#tongkonan-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+#tongkonan-hero .box-tentang {
+  z-index: 9;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 50px;
+  background-color: #222f1e;
+  border-radius: 0 50px;
+}
+#tongkonan-hero .box-tentang h1 {
+  font-size: var(--font50);
+  font-family: var(--fontSecond);
+  color: var(--colorYellow);
+}
+#tongkonan-hero .box-tentang .isi-tentang {
+  display: flex;
+  gap: 20px;
+  justify-content: left;
+  align-items: center;
+}
+#tongkonan-hero .box-tentang .isi-tentang p {
+  font-size: var(--font25);
+  color: var(--colorLight);
+  font-family: var(--fontSecond);
+  font-weight: var(--fontBold);
+}
+#tongkonan-hero .box-tentang .isi-tentang .garis-vertikal {
+  width: 2px;
+  height: 20px;
+  background-color: var(--colorLight);
+}
+
+#materi-tongkonan {
+  padding: 50px 115px;
+  display: flex;
+  gap: 50px;
+  background-color: var(--colorSecondary);
+}
+#materi-tongkonan .image-materi img {
+  width: 350px;
+  border-radius: 50px;
+}
+#materi-tongkonan .isi-materi p {
+  color: var(--colorYellow);
+  margin-bottom: 50px;
+  font-size: var(--font20);
+}
+
+#rumah-adat-hero {
+  width: 100%;
+  height: 70vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(assets/image/rumah-adat.png);
+  background-size: cover;
+  position: relative;
+}
+#rumah-adat-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+#rumah-adat-hero .judul-rumah {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+#rumah-adat-hero .judul-rumah h1 {
+  font-family: var(--fontUtama);
+  font-weight: var(--fontRegular);
+  font-size: 100px;
+  text-align: center;
+  margin-bottom: -40px;
+}
+#rumah-adat-hero .judul-rumah p {
+  font-size: 30px;
+  text-align: center;
+}
+#rumah-adat-hero .judul-rumah .nusantara {
+  font-family: var(--fontUtama);
+  font-size: 40px;
+}
+
+#jelajah-rumah-adat {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  background-color: var(--colorSecondary);
+}
+#jelajah-rumah-adat .pembagian-rumah-adat {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+#jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat {
+  border-radius: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 30px 45px;
+  flex: 1;
+  max-width: 30%;
+  min-width: 30%;
+  height: 375px;
+  position: relative;
+  overflow: hidden;
+}
+#jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+#jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+#jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat p {
+  font-size: var(--font20);
+  z-index: 2;
+}
+#jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat h1 {
+  font-size: var(--font40);
+  z-index: 2;
+}
+
+@media only screen and (max-width: 576px) {
+  #desktop-nav {
+    padding: 10px 25px;
+  }
+  #desktop-nav nav {
+    display: none;
+  }
+  #desktop-nav .hamburger-menu {
+    display: block;
+    color: var(--colorLight);
+    font-size: var(--font30);
+    color: white;
+    background-color: transparent;
+    border: none;
+  }
+  #desktop-nav img {
+    width: 40px;
+  }
+  #desktop-nav.scrolled {
+    background-color: var(--colorPrimary);
+    padding: 10px 25px;
+  }
+  .mobile-sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--colorPrimary);
+    z-index: 1000;
+    transition: 0.5s;
+    padding-top: 10px;
+  }
+  .mobile-sidebar .close-sidebar {
+    width: 100%;
+    display: block;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+  }
+  .mobile-sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar-scr-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+    transition: 0.5s;
+  }
+  #hero img {
+    height: 100px;
+  }
+  #hero .nav-pendukung {
+    display: none;
+  }
+  #hero .mobile-nav-pendukung {
+    position: relative;
+    z-index: 9;
+    display: block;
+  }
+  #hero .mobile-nav-pendukung .mobile-explore {
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+    color: var(--colorLight);
+  }
+  #hero .mobile-nav-pendukung .mobile-explore p {
+    font-size: var(--font18);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  #hero .mobile-nav-pendukung .mobile-explore i {
+    font-size: var(--font25);
+  }
+  #jelajah {
+    flex-direction: column;
+    padding-bottom: 300px;
+  }
+  #jelajah .judul-jelajah {
+    flex-direction: column;
+    padding: 0 25px;
+    text-align: center;
+    gap: 20px;
+  }
+  #jelajah .judul-jelajah h1 {
+    font-size: var(--font70);
+  }
+  #jelajah .judul-jelajah p {
+    width: 90%;
+    font-size: var(--font16);
+  }
+  #jelajah .carousel-jelajah {
+    padding-inline: 25px;
+    height: 500px;
+  }
+  #jelajah .carousel-jelajah .cards-jelajah {
+    min-width: 250px;
+    height: 400px;
+  }
+  #jelajah .carousel-jelajah .cards-jelajah .teks-bagian-jelajah {
+    padding: 20px;
+    text-align: center;
+  }
+  #jelajah .carousel-jelajah .cards-jelajah .teks-bagian-jelajah h1 {
+    font-size: var(--font30);
+  }
+  #about-us {
+    padding: 0px 30px 25px;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  #about-us .teks-about-us {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  #about-us .teks-about-us .judul-about-us p {
+    font-size: var(--font16);
+  }
+  #about-us .teks-about-us .judul-about-us h1 {
+    font-size: var(--font60);
+  }
+  #about-us .teks-about-us .sejarah-about-us p {
+    font-size: var(--font18);
+    width: 100%;
+  }
+  #about-us .image-about-us {
+    margin-top: -250px;
+    align-items: center;
+    position: static;
+    order: 1;
+  }
+  #about-us .image-about-us .gambar-utama {
+    margin: 0;
+    height: 45vh;
+    margin: 0px -150px;
+  }
+  #about-us .image-about-us .gambar-pendukung1 {
+    height: 35vh;
+  }
+  #about-us .image-about-us .gambar-pendukung2 {
+    height: 35vh;
+  }
+  #cerita-pilihan-nusantara {
+    flex-direction: column;
+  }
+  #cerita-pilihan-nusantara .judul-section-cerita {
+    flex-direction: column;
+    padding: 0 25px;
+    text-align: center;
+    gap: 20px;
+  }
+  #cerita-pilihan-nusantara .judul-section-cerita h1 {
+    font-size: var(--font70);
+  }
+  #cerita-pilihan-nusantara .judul-section-cerita p {
+    width: 90%;
+    font-size: var(--font16);
+  }
+  #cerita-pilihan-nusantara .carousel-cerita {
+    padding-inline: 25px;
+  }
+  #cerita-pilihan-nusantara .carousel-cerita .card-cerita {
+    min-width: 300px;
+  }
+  #cerita-pilihan-nusantara .carousel-cerita .card-cerita img {
+    height: 300px;
+  }
+  #cerita-pilihan-nusantara .carousel-cerita .card-cerita .img-overlay-cc {
+    height: 300px;
+  }
+}/*# sourceMappingURL=style.css.map */
