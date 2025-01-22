@@ -127,6 +127,10 @@ a {
   padding: 2px 50px;
 }
 
+.mobile-sidebar {
+  display: none;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -768,6 +772,45 @@ footer .footer-copyright-line .footer-cl-security ul li {
     background-color: var(--colorPrimary);
     padding: 10px 25px;
   }
+  footer {
+    padding: 35px 35px 30px 35px;
+  }
+  footer .footer-subscribe-line {
+    flex-direction: column;
+    gap: 50px;
+  }
+  footer .footer-subscribe-line h1 {
+    width: 100%;
+    text-align: center;
+  }
+  footer .footer-subscribe-line .footer-sl-input {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-subscribe-line .footer-sl-input ::-moz-placeholder {
+    text-align: center;
+  }
+  footer .footer-subscribe-line .footer-sl-input ::placeholder {
+    text-align: center;
+  }
+  footer .footer-nav-line {
+    flex-direction: column;
+    gap: 50px;
+  }
+  footer .footer-nav-line .footer-nl-socials {
+    align-items: center;
+  }
+  footer .footer-nav-line .footer-nl-navigations {
+    display: none;
+  }
+  footer .footer-copyright-line .footer-cl-security {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .footer-copyright-line .footer-cl-security ul {
+    align-items: center;
+    text-align: center;
+  }
   .mobile-sidebar {
     height: 100%;
     width: 0;
@@ -931,5 +974,62 @@ footer .footer-copyright-line .footer-cl-security ul li {
   }
   #cerita-pilihan-nusantara .carousel-cerita .card-cerita .img-overlay-cc {
     height: 300px;
+  }
+  #rumah-adat-hero {
+    position: relative;
+    height: 100vh;
+  }
+  #jelajah-rumah-adat {
+    padding: 0;
+  }
+  #jelajah-rumah-adat .pembagian-rumah-adat {
+    padding: 25px;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  #jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat {
+    min-width: none;
+    max-width: none;
+    height: 200px;
+    padding: 10px 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat p {
+    font-size: var(--font16);
+  }
+  #jelajah-rumah-adat .pembagian-rumah-adat .cards-rumah-adat h1 {
+    font-size: var(--font25);
+  }
+  #tongkonan-hero {
+    position: relative;
+    justify-content: end;
+    padding: 25px;
+  }
+  #tongkonan-hero .box-tentang {
+    padding: 35px;
+    gap: 15px;
+  }
+  #tongkonan-hero .box-tentang h1 {
+    font-size: var(--font30);
+  }
+  #tongkonan-hero .box-tentang .isi-tentang {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #tongkonan-hero .box-tentang .isi-tentang p {
+    font-size: var(--font18);
+  }
+  #tongkonan-hero .box-tentang .isi-tentang .garis-vertikal {
+    width: 100%;
+    height: 2px;
+  }
+  #materi-tongkonan {
+    flex-direction: column;
+    padding: 25px 25px;
+  }
+  #materi-tongkonan .image-materi img {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -26,7 +26,16 @@
           <li><a href="index.html/#cerita-pilihan-nusantara">Cerita Nusantara</a></li>
         </ul>
       </nav>
+      <button class="hamburger-menu" onclick="openSidebar()"><i class="fi fi-ss-menu-burger"></i></button>
     </header>
+    <div id="mobile-sidebar" class="mobile-sidebar">
+      <button class="close-sidebar" onclick="closeSidebar()"><i class="fi fi-ss-cross"></i></button>
+      <a href="index.html">Home</a>
+      <a href="#menjelajah">Jelajahi Nusantara</a>
+      <a href="#about-us">Tentang Kami</a>
+      <a href="#cerita-pilihan-nusantara">Cerita Nusantara</a>
+    </div>
+    <div id="sidebar-scr-overlay" class="sidebar-scr-overlay" onclick="closeSidebar()"></div>
     <main>
       <section id="rumah-adat-hero">
         <div class="judul-rumah">

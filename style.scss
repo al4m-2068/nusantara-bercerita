@@ -104,6 +104,9 @@ a {
   background-color: var(--colorPrimary);
   padding: 2px 50px;
 }
+.mobile-sidebar {
+  display: none;
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -727,6 +730,44 @@ footer {
     background-color: var(--colorPrimary);
     padding: 10px 25px;
   }
+  footer {
+    padding: 35px 35px 30px 35px;
+    .footer-subscribe-line {
+      flex-direction: column;
+      gap: 50px;
+      h1 {
+        width: 100%;
+        text-align: center;
+      }
+      .footer-sl-input {
+        flex-direction: column;
+        align-items: center;
+        ::placeholder {
+          text-align: center;
+        }
+      }
+    }
+    .footer-nav-line {
+      flex-direction: column;
+      gap: 50px;
+      .footer-nl-socials {
+        align-items: center;
+      }
+      .footer-nl-navigations {
+        display: none;
+      }
+    }
+    .footer-copyright-line {
+      .footer-cl-security {
+        flex-direction: column;
+        text-align: center;
+        ul {
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+  }
   .mobile-sidebar {
     height: 100%;
     width: 0;
@@ -894,6 +935,71 @@ footer {
         .img-overlay-cc {
           height: 300px;
         }
+      }
+    }
+  }
+
+  // Rumah Adat
+
+  #rumah-adat-hero {
+    position: relative;
+    height: 100vh;
+  }
+  #jelajah-rumah-adat {
+    padding: 0;
+    .pembagian-rumah-adat {
+      padding: 25px;
+      justify-content: space-between;
+      gap: 25px;
+      .cards-rumah-adat {
+        min-width: none;
+        max-width: none;
+        height: 200px;
+        padding: 10px 25px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        p {
+          font-size: var(--font16);
+        }
+        h1 {
+          font-size: var(--font25);
+        }
+      }
+    }
+  }
+
+  // Tongkonan
+
+  #tongkonan-hero {
+    position: relative;
+    justify-content: end;
+    padding: 25px;
+    .box-tentang {
+      padding: 35px;
+      gap: 15px;
+      h1 {
+        font-size: var(--font30);
+      }
+      .isi-tentang {
+        flex-direction: column;
+        gap: 10px;
+        p {
+          font-size: var(--font18);
+        }
+        .garis-vertikal {
+          width: 100%;
+          height: 2px;
+        }
+      }
+    }
+  }
+  #materi-tongkonan {
+    flex-direction: column;
+    padding: 25px 25px;
+    .image-materi {
+      img {
+        width: 100%;
       }
     }
   }
